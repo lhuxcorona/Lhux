@@ -52,11 +52,6 @@ link de casos de uso --- Emanuel
 
 ###  Install Node Version Manager nvm  and Node on macOS
 
-
-<p align='center'>
-<img src='https://cdn.jsdelivr.net/gh/facebook/create-react-app@27b42ac7efa018f2541153ab30d63180f5fa39e0/screencast.svg' width='600' alt='npm start'>
-</p>
-
 Assuming that Homebrew is already installed, type:
 ```
 brew update
@@ -125,6 +120,15 @@ Open a terminal from VSC and run the test script you are  interest in (wdio.head
 npm run headspin.android.stage -- --spec "tests/android/ar.comparation.images.feature"
 
 # Project structure
+    
+    
+    ├── build                   # Compiled files (alternatively `dist`)
+    ├── docs                    # Documentation files (alternatively `doc`)
+    ├── src                     # Source files (alternatively `lib` or `app`)
+    ├── test                    # Automated tests (alternatively `spec` or `tests`)
+    ├── tools                   # Tools and utilities
+    ├── LICENSE
+    └── README.md
     
 ##### apps > android > wdw-rc-dev-stage.apk
 
