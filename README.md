@@ -122,13 +122,18 @@ npm run headspin.android.stage -- --spec "tests/android/ar.comparation.images.fe
 # Project structure
     
     
-    ├── build                   # Compiled files (alternatively `dist`)
-    ├── docs                    # Documentation files (alternatively `doc`)
-    ├── src                     # Source files (alternatively `lib` or `app`)
-    ├── test                    # Automated tests (alternatively `spec` or `tests`)
-    ├── tools                   # Tools and utilities
-    ├── LICENSE
-    └── README.md
+    ├── apps                   # Contains both android and IOS app files
+    ├── config                 # Contains all the configuration files where define desired capabilities for appium
+    ├── core                   # Base functions that any class can use
+    ├── src                    # Source files for the root-level application project.
+    ├── tests                  # Contains all the tests for android and ios
+    ├── visual_regression      # includes images used for test comparation 
+    ├── .env                   # Contains variables that are used to run the test on headspin
+    ├── .gitignore             # Specifies intentionally untracked files that Git should ignore.
+    ├── package-lock.json      # Provides version information for all packages installed into node_modules by the npm client
+    ├── package.json           # Holds important information about the project.
+    ├── tsconfig.json          # The base TypeScript configuration for projects in the workspaces
+    └── README.md              # Introductory documentation for the application. 
     
 ##### apps > android > wdw-rc-dev-stage.apk
 
