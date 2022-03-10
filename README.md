@@ -113,131 +113,128 @@ APK file for Android
 
 TODO file for IOS
 
-config
+##### config
 
 This directory contains all the configuration files where define desired capabilities for appium.  Within this directory are the different configurations of the android and ios platforms as well as the configuration for headspin
 
-core
+##### core
 
 Other files in the project inherit from this base files.
 
-node_modules
+##### node_modules
 
 Provides npm packages to the entire workspace. Workspace-wide node_modules dependencies are visible to all projects.
 
-src
+##### src
 
 Source files for the root-level application project.
 
-src > data > loginData.js
+##### src > data > loginData.js
 
 Contains  information for user authentication
 
-src > data > helpers
+##### src > data > helpers
 
 Helpers, as the name suggests, help with some common tasks. Each helper file is simply a collection of functions in a particular category.
 
-src > data > helpers > android.permissions.ts
+##### src > data > helpers > android.permissions.ts
 
 Provides several selection strategies to query an item related to mobile data permission such as location, camera, etc. on android
 
-src > data > helpers > app.info.screen.ts Remover parece estar duplicado
+##### src > data > helpers > app.info.screen.ts Remover parece estar duplicado
 Provides several selection strategies to query an item related to mobile data permission such as location, camera, etc. TODO
 
-src > data > helpers > gestures.ts
+##### src > data > helpers > gestures.ts
 
 Holds functions of gestures are performed by the user's fingers (tap, swipe, drag, slide etc.) on the application.
 
-src > data > helpers > ios.gallery.screen.ts
+##### src > data > helpers > ios.gallery.screen.ts
 
 Provides several selection strategies to query an item related to photopass gallery on IOS
 
-src > data > helpers > ios.permissions.ts
+##### src > data > helpers > ios.permissions.ts
 
 Provides several selection strategies to query an item related to mobile data permission such as location, camera, etc. on ios
 
-src > data > helpers > utils.ts
+##### src > data > helpers > utils.ts
 
 Utility class stores and handles the functions (The code which is repetitive in nature) which can be commonly used across the entire framework.
 
-src > data > helpers > validation.android.ts
+##### src > data > helpers > validation.android.ts
 
 Contains methods that validate path for video and photo saved into the device
 
-src > data > helpers > wait.actions.ts
+##### src > data > helpers > wait.actions.ts
 
 Contains functions that expects a condition and waits until that condition is fulfilled with a truthy value for differents elements
 
-src > screens
+##### src > screens
 
 Contains files that  belongs to one UI page in the application and are common to android and ios. This page class will identify the UI Elements of that page and also contains methods which perform operations on those UI Elements.
 
-src > screens > android
+##### src > screens > android
 
 Contains files that  belongs to one UI page in the application on platform Android
 
-src > screens > ios
+##### src > screens > ios
 
 Contains files that  belongs to one UI page in the application on platform IOS
 
-src > steps
+##### src > steps
 
 Includes Gherkin step files for  differents scenarios in the application
 
-src > steps > given.ts
+##### src > steps > given.ts
 
 Describe an initial context  (Given steps) base on Gherkin languaje
 
-src > steps > hooks.ts 
+##### src > steps > hooks.ts 
 
 Run functions before or after the test. It includes features like login and some pre-steps for app login.
 
-src > steps > when.ts
+##### src > steps > when.ts
 
 Describe an event (When steps) base on Gherkin languaje
 
-src > steps > then.ts
+##### src > steps > then.ts
 
 Describe an expected outcome (Then steps) base on Gherkin languaje
 
-src > types >
+##### src > types >
 TODO
 
-src > tests > android
+##### src > tests > android
 
 All the tests for android are kept in this folder, it holds test case development based on functional requirements.
 
-src > tests > ios
+##### src > tests > ios
 
 All the tests for ios are kept in this folder, it holds test case development based on functional requirements.
 
-visual_regression
+##### visual_regression
 TODO
 
-.env
+##### .env
 
 Contains variables that are used to run the test on headspin
 
-.gitignore
+##### .gitignore
 
 Specifies intentionally untracked files that Git should ignore.
 
-package-lock.json
+##### package-lock.json
 
 Provides version information for all packages installed into node_modules by the npm client
 
-package.json
+##### package.json
 
 Holds important information about the project. It contains  metadata about the project (like the project name and description) as well as functional metadata like the package version number and a list of dependencies required by the application.
 
-README.md
+##### README.md
 
 Introductory documentation for the application. 
 
-tsconfig.json
+##### tsconfig.json
 
 The base TypeScript configuration for projects in the workspace
 
-
-
-lux
