@@ -29,9 +29,9 @@ link de casos de uso --- Emanuel
 
 ## Requirements
 
-Disney Network account
-Access to disney's VPN
-TODO  Certificados
+- Disney Network account
+- Access to disney's VPN
+- Disney Certificate [Certificate](https://enroll.disney.pvt/rootcerts.stm)
 
 ## Software Requirements
 
