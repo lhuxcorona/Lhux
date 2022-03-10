@@ -22,6 +22,7 @@ link de casos de uso --- Emanuel
 * WebdriverIO 7.16.16
 * TypeScript 4.3.2
 * Appium
+* Allure Report 
 
 
 # Installation
@@ -52,48 +53,63 @@ TODO  Certificados
 ###  Install Node Version Manager nvm  and Node on macOS
 
 Assuming that Homebrew is already installed, type:
+```
 brew update
 brew install nvm 
-
+```
 Next, create a directory for NVM in home.
+```
 mkdir ~/.nvm
-
+```
 Add below lines to ~/.bash_profile ( or ~/.zshrc for macOS Catalina or later)
+```
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+```
 
 Reload the shell configuration by using the following command
+```
 source ~/.zshrc
+```
 
 Install the specific version
+```
 nvm install v14.17.0
+```
 
 Next, you actually have to use that specific version of Node that you just installed
+```
 nvm use v14.17.0
+```
 
 Verify the installation
+```
 node —version
 npm version
-
+```
 # Project setup
 
 Clone the ar-plus/mobile_automation project from Git repository using the URL git@github.disney.com:ar-plus/mobile_automation.git  to your local machine
 
 in VSC select File > Open Folder  and browse to your project folder that you cloned from previous step
 
-In order to speed up the development process, install Cucumber (Gherkin) Full Support and Beautify extensions in VSC
+In order to speed up the development process, install Cucumber (Gherkin) Full Support and Beautify extensions JavaScript and TypeScript Nightly, DotENV
+
+ in VSC
 
 
-### How to run the project on a physical device
+### How to run the project on a physical device android
 
 Connect your device over USB
 
 Verify that your operating system is able to see your device, type "adb devices" on a terminal, it should appear the list of devices attached
 
-Copy the name and characteristics of the device in the configuration file  (wdio.ios.conf for IOS or wdio.android.conf for Android)  in the capabilities of appium
+Copy the name and characteristics of the device in the configuration file  wdio.android.conf for Android in the capabilities of appium
 
 Open a terminal from VSC and run the test script you are  interest in, for instance:
 /node_modules/.bin/wdio ./config/wdio.android.conf.ts --spec ./tests/android/ar.permissions.feature 
+
+### How to run the project on a physical device ios
 
 ### How to run with headspin
 
@@ -202,6 +218,10 @@ Describe an expected outcome (Then steps) base on Gherkin languaje
 
 ##### src > types >
 TODO
+agregar libreria de typescri
+nuevas funcionalidades 
+
+
 
 ##### src > tests > android
 
@@ -213,6 +233,7 @@ All the tests for ios are kept in this folder, it holds test case development ba
 
 ##### visual_regression
 TODO
+
 
 ##### .env
 
