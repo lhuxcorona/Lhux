@@ -105,11 +105,11 @@ npm run headspin.android.stage -- --spec "tests/android/ar.comparation.images.fe
 
 # Project structure
     
-apps > android > wdw-rc-dev-stage.apk
+##### apps > android > wdw-rc-dev-stage.apk
 
 APK file for Android
 
-apps > ios >
+##### apps > ios >
 
 TODO file for IOS
 
