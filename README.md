@@ -139,19 +139,21 @@ Open a terminal from VSCode and run the test script you are  interest in for ins
 
 ### config directory
 
- Within this directory  are the appium capabilities for the different platforms (Android & IO) as well as the configuration with headspin
- .
- ├── ...
- ├── config                                                    
- │   ├── wdio.android.conf.ts                                 # Config capabilities for Android
- │   ├── wdio.android.weak.connection.config.ts  # Config specific capabilities for weak connection
- │   ├── wdio.headspin.android.conf.ts                 # Config capabilities for Headspin-Android
- │   ├── wdio.headspin.ios.conf.ts                        # Config capabilities for Headspin-IOS
- │   ├── wdio.headspin.shared.config.ts               # Config shared capabilities for headspin
- │   ├── wdio.ios.real.device.ts                             # Config specific capabilities
- │   ├── wdio.shared.conf.ts                                 # Config shared capabilities for both android and ios
- │   └── ...               
- └── ...
+ Within this directory  are the appium capabilities for the different platforms (Android & IO) as well as the configuration with headspin. 
+ If you need to add any specific capabilities this is the place to put it.
+ 
+     .
+     ├── ...
+     ├── config                   
+     │   ├── wdio.android.conf.ts                    # Config capabilities for Android
+     │   ├── wdio.android.weak.connection.config.ts  # Config specific capabilities for weak connection
+     │   ├── wdio.headspin.android.conf.ts           # Config capabilities for Headspin-Android
+     │   ├── wdio.headspin.ios.conf.ts               # Config capabilities for Headspin-IOS
+     │   ├── wdio.headspin.shared.config.ts          # Config shared capabilities for headspin
+     │   ├── wdio.ios.real.device.ts                 # Config specific capabilities
+     │   ├── wdio.shared.conf.ts                     # Config shared capabilities for both android and ios
+     │   └── ...                 
+     └── ...
 
 ##### core
 
