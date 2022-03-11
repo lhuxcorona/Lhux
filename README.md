@@ -121,26 +121,27 @@ Open a terminal from VSCode and run the test script you are  interest in for ins
 
 # Project structure
 
-## top-level directory
+## Top-level directory
         
-    ├── apps                   # Contains both android and IOS app files
-    ├── config                 # Contains all the configuration files where define desired capabilities for appium
-    ├── core                   # Base functions that any class can use
-    ├── src                    # Source files for the root-level application project.
-    ├── tests                  # Contains all the tests for android and ios
-    ├── visual_regression      # Includes images used for test comparation 
-    ├── .env                   # Environment variables that are used for local development
+    ├── apps                   # Contains both android and IOS app files.
+    ├── config                 # Contains all the configuration files where define desired capabilities for appium.
+    ├── core                   # Base functions that any class can use.
+    ├── node_modules           # Provides npm packages to the entire workspace.
+    ├── src                    # Application source code.
+    ├── tests                  # Contains all the tests for android and ios.
+    ├── visual_regression      # Includes images used for test comparation.
+    ├── .env                   # Environment variables that are used for local development.
     ├── .gitignore             # Specifies intentionally untracked files that Git should ignore.
-    ├── package-lock.json      # Provides version information for all packages installed into node_modules by the npm client
+    ├── package-lock.json      # Provides version information for all packages installed into node_modules by the npm client.
     ├── package.json           # Holds important information about the project.
-    ├── tsconfig.json          # The base TypeScript configuration for projects in the workspaces
+    ├── tsconfig.json          # The base TypeScript configuration for projects in the workspaces.
     └── README.md              # Introductory documentation for the application. 
     
 
 ### config directory
 
  Within this directory  are the appium capabilities for the different platforms (Android & IO) as well as the configuration with headspin. 
- If you need to add any specific capabilities this is the place to put it.
+ if some  specific capability  is needed, this is the place to put it
  
      .
      ├── ...
@@ -155,129 +156,71 @@ Open a terminal from VSCode and run the test script you are  interest in for ins
      │   └── ...                 
      └── ...
 
-##### core lux
+### core directory
 
 Other files in the project inherit from this base files.
 
-##### node_modules
+    .
+    ├── ...
+    ├── core                   
+    │   ├── base.screen.ts     # Common or shared components 
+    │   ├── element.ts         # Provides function for selection strategies to query an item
+    │   ├── screen.factory.ts  # Provides the names of the different UI screens
+    │   └── ...                 
+    └── ...
+
+
+### node_modules directory
 
 Provides npm packages to the entire workspace. Workspace-wide node_modules dependencies are visible to all projects.
 
-##### src
+    .
+    ├── ...
+    ├── node_modules                   
+    └── ...
 
-Source files for the root-level application project.
+### src directory
 
-##### src > data > loginData.js
+Application source code
 
-Contains  information for user authentication
-
-##### src > data > helpers
-
-Helpers, as the name suggests, help with some common tasks. Each helper file is simply a collection of functions in a particular category.
-
-##### src > data > helpers > android.permissions.ts
-
-Provides several selection strategies to query an item related to mobile data permission such as location, camera, etc. on android
-
-##### src > data > helpers > app.info.screen.ts Remover parece estar duplicado
-Provides several selection strategies to query an item related to mobile data permission such as location, camera, etc. TODO
-
-##### src > data > helpers > gestures.ts
-
-Holds functions of gestures are performed by the user's fingers (tap, swipe, drag, slide etc.) on the application.
-
-##### src > data > helpers > ios.gallery.screen.ts
-
-Provides several selection strategies to query an item related to photopass gallery on IOS
-
-##### src > data > helpers > ios.permissions.ts
-
-Provides several selection strategies to query an item related to mobile data permission such as location, camera, etc. on ios
-
-##### src > data > helpers > utils.ts
-
-Utility class stores and handles the functions (The code which is repetitive in nature) which can be commonly used across the entire framework.
-
-##### src > data > helpers > validation.android.ts
-
-Contains methods that validate path for video and photo saved into the device
-
-##### src > data > helpers > wait.actions.ts
-
-Contains functions that expects a condition and waits until that condition is fulfilled with a truthy value for differents elements
-
-##### src > screens
-
-Contains files that  belongs to one UI page in the application and are common to android and ios. This page class will identify the UI Elements of that page and also contains methods which perform operations on those UI Elements.
-
-##### src > screens > android
-
-Contains files that  belongs to one UI page in the application on platform Android
-
-##### src > screens > ios
-
-Contains files that  belongs to one UI page in the application on platform IOS
-
-##### src > steps
-
-Includes Gherkin step files for  differents scenarios in the application
-
-##### src > steps > given.ts
-
-Describe an initial context  (Given steps) base on Gherkin languaje
-
-##### src > steps > hooks.ts 
-
-Run functions before or after the test. It includes features like login and some pre-steps for app login.
-
-##### src > steps > when.ts
-
-Describe an event (When steps) base on Gherkin languaje
-
-##### src > steps > then.ts
-
-Describe an expected outcome (Then steps) base on Gherkin languaje
-
-##### src > types >
-TODO
-agregar libreria de typescri
-nuevas funcionalidades 
+    .
+    ├── ...
+    ├── src  #Source files for the root-level application project.                  
+    │   ├── data    
+    |            ├── loginData.js # Contains information for user authentication
+    │   ├── helpers  # Helper functions and utility classes. Each helper file is simply a collection of functions in a particular category. 
+    |            ├── android.permissions.ts #Provides several selection strategies to query an item related to mobile data permission such as location, camera, etc. on android
+    |            ├── gestures.ts            # Holds functions of gestures are performed by the user's fingers (tap, swipe, drag, slide etc.) on the application.
+    |            ├── ios.gallery.screen.ts  # Provides several selection strategies to query an item related to photopass gallery on IOS
+    |            ├── ios.permissions.ts     # Provides several selection strategies to query an item related to mobile data permission such as location, camera, etc. on ios
+    |            ├── util.ts                # Utility class stores and handles the functions (The code which is repetitive in nature) which can be commonly used across the entire framework.
+    |            ├── validation.android.ts  # Contains methods that validate path for video and photo saved into the device
+    |            ├── wait.actions.ts        # Contains functions that expects a condition and waits until that condition is fulfilled with a truthy value for differents elements
+    │   ├── screens  # Contains files that  belongs to one UI page in the application and are common to android and ios. This page class will identify the UI Elements of that page and also contains methods which perform operations on those UI Elements. For each UI page in the application, there is a corresponding Page Class
+    |            ├── android                # Contains files that  belongs to one UI page in the application on platform Android             
+    |            ├── ios                    # Contains files that  belongs to one UI page in the application on platform IOS
+    │   ├── steps  # Includes Gherkin step files for  differents scenarios in the application 
+    |            ├── given.ts               # Describe an initial context  (Given steps) base on Gherkin languaje
+    |            ├── hooks.ts               # Run functions before or after the test. It includes features like login and some pre-steps for app login.
+    |            ├── when.ts.ts             # Describe an event (When steps) base on Gherkin languaje
+    |            ├── then.ts.ts             # Describe an expected outcome (Then steps) base on Gherkin languaje
+    │   ├── types  # Additional capabilities   
+    |            ├── types.d.ts             # Additional libraries from typescript
+    |            ├── wdio.d.ts              # functions that helps in order to compare images
+    │   ├── test  #  add use cases in this directory
+    |            ├── android                # All the tests for android are kept in this folder, it holds test case development based on functional requirements.
+    |            ├── ios                    # All the tests for ios are kept in this folder, it holds test case development based on functional requirements.
+    │   └── ...                 
+    └── ...
 
 
+### visual_regression directory
 
-##### src > tests > android
+Includes images used for test comparation.
 
-All the tests for android are kept in this folder, it holds test case development based on functional requirements.
+    .
+    ├── ...
+    ├── visual_regression                   
+    └── ...
 
-##### src > tests > ios
-
-All the tests for ios are kept in this folder, it holds test case development based on functional requirements.
-
-##### visual_regression
-TODO
-
-
-##### .env
-
-Contains variables that are used to run the test on headspin
-
-##### .gitignore
-
-Specifies intentionally untracked files that Git should ignore.
-
-##### package-lock.json
-
-Provides version information for all packages installed into node_modules by the npm client
-
-##### package.json
-
-Holds important information about the project. It contains  metadata about the project (like the project name and description) as well as functional metadata like the package version number and a list of dependencies required by the application.
-
-##### README.md
-
-Introductory documentation for the application. 
-
-##### tsconfig.json
-
-The base TypeScript configuration for projects in the workspace
 
