@@ -89,35 +89,35 @@ npm version
 ```
 # Project setup
 
-Clone the ar-plus/mobile_automation project from Git repository using the URL git@github.disney.com:ar-plus/mobile_automation.git  to your local machine
 
-in VSC select File > Open Folder  and browse to your project folder that you cloned from previous step
+- Clone the  project `ar-plus/mobile_automation` using the URL `git@github.disney.com:ar-plus/mobile_automation.git` to your local machine
 
-In order to speed up the development process, install Cucumber (Gherkin) Full Support and Beautify extensions JavaScript and TypeScript Nightly, DotENV
+- In VSCode select  `File > Open Folder `  and browse to your project folder that you cloned from previous step
 
- in VSC
+- In order to speed up the development process, install  `Cucumber (Gherkin) Full Support, Beautify, TypeScript Nightly and DotENV ` extensions in VSCode
 
 
-### How to run the project on a physical device android
+### How to run the project on a physical device on android
 
 Connect your device over USB
 
-Verify that your operating system is able to see your device, type "adb devices" on a terminal, it should appear the list of devices attached
+Verify that your operating system is able to see your device, type  `adb devices ` on a terminal, it should appear the list of devices attached
 
 Copy the name and characteristics of the device in the configuration file  wdio.android.conf for Android in the capabilities of appium
 
 Open a terminal from VSC and run the test script you are  interest in, for instance:
-/node_modules/.bin/wdio ./config/wdio.android.conf.ts --spec ./tests/android/ar.permissions.feature 
+`/node_modules/.bin/wdio ./config/wdio.android.conf.ts --spec ./tests/android/ar.permissions.feature`
 
 ### How to run the project on a physical device ios
+TODO
 
 ### How to run with headspin
 
 You must be connected to the disney vpn
 
-Open a terminal from VSC and run the test script you are  interest in (wdio.headspin.ios.conf for IOS or wdio.headspin.android.conf for android), for instance:
+Open a terminal from VSCode and run the test script you are  interest in for instance:
 
-npm run headspin.android.stage -- --spec "tests/android/ar.comparation.images.feature"
+`npm run headspin.android.stage -- --spec "tests/android/ar.comparation.images.feature `
 
 # Project structure
     
@@ -127,25 +127,18 @@ npm run headspin.android.stage -- --spec "tests/android/ar.comparation.images.fe
     ├── core                   # Base functions that any class can use
     ├── src                    # Source files for the root-level application project.
     ├── tests                  # Contains all the tests for android and ios
-    ├── visual_regression      # includes images used for test comparation 
-    ├── .env                   # Contains variables that are used to run the test on headspin
+    ├── visual_regression      # Includes images used for test comparation 
+    ├── .env                   # Environment variables that are used for local development
     ├── .gitignore             # Specifies intentionally untracked files that Git should ignore.
     ├── package-lock.json      # Provides version information for all packages installed into node_modules by the npm client
     ├── package.json           # Holds important information about the project.
     ├── tsconfig.json          # The base TypeScript configuration for projects in the workspaces
     └── README.md              # Introductory documentation for the application. 
     
-##### apps > android > wdw-rc-dev-stage.apk
 
-APK file for Android
+### config
 
-##### apps > ios >
-
-TODO file for IOS
-
-##### config
-
-This directory contains all the configuration files where define desired capabilities for appium.  Within this directory are the different configurations of the android and ios platforms as well as the configuration for headspin
+ Within this directory are the different configurations of the android and ios platforms as well as the configuration for headspin.
 
 ##### core
 
