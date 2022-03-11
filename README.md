@@ -120,8 +120,9 @@ Open a terminal from VSCode and run the test script you are  interest in for ins
 `npm run headspin.android.stage -- --spec "tests/android/ar.comparation.images.feature `
 
 # Project structure
-    
-    
+
+## top-level directory
+        
     ├── apps                   # Contains both android and IOS app files
     ├── config                 # Contains all the configuration files where define desired capabilities for appium
     ├── core                   # Base functions that any class can use
@@ -136,9 +137,21 @@ Open a terminal from VSCode and run the test script you are  interest in for ins
     └── README.md              # Introductory documentation for the application. 
     
 
-### config
+### config directory
 
- Within this directory are the different configurations of the android and ios platforms as well as the configuration for headspin.
+ Within this directory  are the appium capabilities for the different platforms (Android & IO) as well as the configuration with headspin
+ .
+ ├── ...
+ ├── config                                                    
+ │   ├── wdio.android.conf.ts                                 # Config capabilities for Android
+ │   ├── wdio.android.weak.connection.config.ts  # Config specific capabilities for weak connection
+ │   ├── wdio.headspin.android.conf.ts                 # Config capabilities for Headspin-Android
+ │   ├── wdio.headspin.ios.conf.ts                        # Config capabilities for Headspin-IOS
+ │   ├── wdio.headspin.shared.config.ts               # Config shared capabilities for headspin
+ │   ├── wdio.ios.real.device.ts                             # Config specific capabilities
+ │   ├── wdio.shared.conf.ts                                 # Config shared capabilities for both android and ios
+ │   └── ...               
+ └── ...
 
 ##### core
 
