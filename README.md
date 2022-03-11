@@ -155,7 +155,7 @@ Open a terminal from VSCode and run the test script you are  interest in for ins
      │   └── ...                 
      └── ...
 
-##### core
+##### core lux
 
 Other files in the project inherit from this base files.
 
